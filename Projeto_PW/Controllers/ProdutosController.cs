@@ -24,7 +24,8 @@ namespace Projeto_PW.Controllers
         [HttpPost]
         public IActionResult Create(ProdutoModel produto)
         {
-            return View();
+            lsProdutos.Add(produto);
+            return RedirectToAction("Index");
         }
     }
 }
